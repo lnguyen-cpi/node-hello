@@ -5,10 +5,10 @@ const app_host = process.env.APP_HOST || "None";
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello Node!\n'
+  const msg = `http://${app_host}:${port} -> Hello NodeJS - ${app_version} - ${app_host}`
   res.end(msg);
 });
 
 server.listen(port, () => {
-  console.log(`http://${app_host}:${port} -> Hello NodeJS - ${app_version} - ${app_host}`);
+  console.log(`Server running on http://localhost:${port}/`);
 });
