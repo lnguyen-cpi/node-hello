@@ -5,7 +5,7 @@ const app_host = process.env.APP_HOST || "None";
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = `http://${app_host}:${port} -> Hello NodeJS - ${app_version} - ${app_host}`
+  const msg = `http://${app_host}:${port} -> Hello NodeJS - ${app_version} - ${app_host}, build NODEJS`
   res.end(msg);
 });
 
